@@ -6,8 +6,8 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 
-export const posts = pgTable(
-  "users",
+export const user = pgTable(
+  "user",
   {
     id:uuid("id").primaryKey(),
     email:text("email").notNull(),
