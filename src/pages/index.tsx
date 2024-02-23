@@ -1,11 +1,15 @@
 import { UserButton } from "@clerk/nextjs";
 import Head from "next/head";
 import Link from "next/link";
+import { useSeedNewUser } from "~/hooks/use-seed-new-user";
 
 import { api } from "~/utils/api";
 
 export default function Home() {
   const hello = api.post.hello.useQuery({ text: "from tRPC" });
+  const { data: userData, isLoading: userDataIsLoading } = api.user.get.useQuery();
+
+  useSeedNewUser({ data: userData, isLoading: userDataIsLoading });
 
   return (
     <>
