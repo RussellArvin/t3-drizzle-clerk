@@ -1,3 +1,4 @@
+import { UserButton } from "@clerk/nextjs";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -41,6 +42,7 @@ export default function Home() {
                 to deploy it.
               </div>
             </Link>
+            <UserButton />
           </div>
           <p className="text-2xl text-white">
             {hello.data ? hello.data.greeting : "Loading tRPC query..."}
