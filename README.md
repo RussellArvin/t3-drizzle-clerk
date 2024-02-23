@@ -34,7 +34,7 @@ CLERK_SECRET_KEY=SECRETKEY
 ```
 
 ### Step 3
-Run the project using the following command, I have set it up in a way that the migrations will automatically run
+Run the project using the following command, I have set it up in a way that the migrations will automatically run!
 ```bash
 pnpm run dev
 ```
