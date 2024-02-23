@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
+    "build": "pnpm run db:generate && next build",
     "db:push": "drizzle-kit push:pg",
     "db:generate": "drizzle-kit generate:pg",
     "db:studio": "drizzle-kit studio",
-    "dev": "next dev",
+    "dev": "pnpm run db:migrate && next dev",
     "lint": "next lint",
     "start": "next start"
   },
