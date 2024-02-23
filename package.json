@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm run db:generate && next build",
+    "build": "pnpm run db:migrate && next build",
     "db:push": "drizzle-kit push:pg",
     "db:generate": "drizzle-kit generate:pg",
     "db:studio": "drizzle-kit studio",
+    "db:migrate": "tsx -r dotenv/config ./migrate.ts",
     "dev": "pnpm run db:migrate && next dev",
     "lint": "next lint",
     "start": "next start"
