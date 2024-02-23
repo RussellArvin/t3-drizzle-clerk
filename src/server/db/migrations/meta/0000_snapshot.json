@@ -1,5 +1,5 @@
 {
-  "id": "e1e79373-5b62-40c5-b8eb-83012a92d804",
+  "id": "be3a9e3c-d68e-4753-bca7-e51f139a6b72",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -10,7 +10,7 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "uuid",
+          "type": "text",
           "primaryKey": true,
           "notNull": true
         },
