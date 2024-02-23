@@ -1,28 +1,40 @@
-# Create T3 App
+# T3-Drizzle-Clerk
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a [T3 Stack](https://create.t3.gg/) project with drizzle and clerk. This is personally my favourite tech stack and hence I created a template I can reuse for myself. Made it public so anyone can use it!
 
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## What the does tech stack include?
 
 - [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
+- [Clerk](https://clerk.com/)
+- [Drizzle](https://orm.drizzle.team/)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 
-## Learn More
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## How do I run this?
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Step 1
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+Run the following command to install all node modules, personally, I use `pnpm` but you may use any package manager you deem fit.
 
-## How do I deploy this?
+```bash
+pnpm add
+```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Step 2
+Create a .env file with the following env variables
+
+```env
+# Drizzle
+DATABASE_URL="postgres://username:12345@localhost:5432/t3-drizzle-clerk"
+
+#Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=PUBLICKEY
+CLERK_SECRET_KEY=SECRETKEY
+```
+
+### Step 3
+Run the project using the following command, I have set it up in a way that the migrations will automatically run
+```bash
+pnpm run dev
+```
