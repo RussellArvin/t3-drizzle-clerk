@@ -18,7 +18,7 @@ This is a [T3 Stack](https://create.t3.gg/) project with drizzle and clerk. This
 Run the following command to install all node modules, personally, I use `pnpm` but you may use any package manager you deem fit.
 
 ```bash
-pnpm add
+pnpm install
 ```
 
 ### Step 2
