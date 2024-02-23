@@ -9,7 +9,7 @@ import {
 export const user = pgTable(
   "user",
   {
-    id:uuid("id").primaryKey(),
+    id:text("id").primaryKey(),
     email:text("email").unique().notNull(),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
