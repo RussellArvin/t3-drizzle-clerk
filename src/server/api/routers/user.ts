@@ -18,7 +18,7 @@ export const userRouter = createTRPCRouter({
         .from(user)
         .where(eq(user.id,ctx.auth.userId))
 
-        if(!userData[0]) return new TRPCError({code:"NOT_FOUND"})
+        if(!userData[0]) throw new TRPCError({code:"NOT_FOUND"})
 
         return userData[0]
     }),
